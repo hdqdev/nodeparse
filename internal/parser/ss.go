@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"nodeparse/internal/model"
-	"nodeparse/pkg/utils"
+	"github.com/deqdev/nodeparse/pkg/model"
+	"github.com/deqdev/nodeparse/pkg/utils"
 )
 
 type SSParser struct{}

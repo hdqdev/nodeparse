@@ -9,23 +9,30 @@ import (
 	"strings"
 	"time"
 
-	"nodeparse/internal/model"
-	"nodeparse/internal/parser"
-	"nodeparse/pkg/utils"
+	"github.com/deqdev/nodeparse/internal/parser"
+	"github.com/deqdev/nodeparse/pkg/model"
+	"github.com/deqdev/nodeparse/pkg/utils"
 )
 
 type NodeManager struct {
 	parsers []parser.Parser
 	nodes   []model.Node
+	options *Options
 }
 
-func NewNodeManager() *NodeManager {
-	return &NodeManager{
+func NewNodeManager(opts ...Option) *NodeManager {
+	nm := NodeManager{
 		parsers: []parser.Parser{
 			&parser.SSParser{},
 			// &parser.VmessParser{},
 		},
+		options: &Options{},
 	}
+	for _, opt := range opts {
+		opt(nm.options)
+	}
+
+	return &nm
 }
 
 func (nm *NodeManager) AddParser(parser parser.Parser) {

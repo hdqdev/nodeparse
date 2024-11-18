@@ -3,7 +3,7 @@ package parser
 import (
 	"errors"
 
-	"nodeparse/internal/model"
+	"github.com/deqdev/nodeparse/pkg/model"
 )
 
 type Parser interface {
