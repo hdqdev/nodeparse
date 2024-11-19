@@ -6,6 +6,8 @@ type Node interface {
 	ToClashConfig() map[string]interface{}
 	GetName() string
 	GetType() string
+	GetServer() string
+	GetPort() int
 }
 
 // BaseNode 基础节点结构
@@ -17,4 +19,12 @@ type BaseNode struct {
 
 func (b *BaseNode) GetName() string {
 	return b.Name
+}
+
+func (b *BaseNode) GetServer() string {
+	return b.Server
+}
+
+func (b *BaseNode) GetPort() int {
+	return b.Port
 }

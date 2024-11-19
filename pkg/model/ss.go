@@ -14,7 +14,7 @@ func (n *SSNode) Parse(link string) error {
 }
 
 func (n *SSNode) GetType() string {
-	return "ss"
+	return "shadowsocks"
 }
 
 func (n *SSNode) ToClashConfig() map[string]interface{} {

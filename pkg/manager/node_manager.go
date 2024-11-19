@@ -138,6 +138,10 @@ func (nm *NodeManager) AddNode(node model.Node) error {
 	return nil
 }
 
+func (nm *NodeManager) GetNodes() []model.Node {
+	return nm.nodes
+}
+
 func (nm *NodeManager) ExportToClash() []map[string]interface{} {
 	var configs []map[string]interface{}
 	for _, node := range nm.nodes {
