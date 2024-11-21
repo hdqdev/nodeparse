@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deqdev/nodeparse/pkg/manager"
+	"github.com/hdqdev/nodeparse/pkg/manager"
 )
 
 func main() {

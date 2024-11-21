@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/deqdev/nodeparse/internal/parser"
-	"github.com/deqdev/nodeparse/pkg/model"
-	"github.com/deqdev/nodeparse/pkg/utils"
+	"github.com/hdqdev/nodeparse/internal/parser"
+	"github.com/hdqdev/nodeparse/pkg/model"
+	"github.com/hdqdev/nodeparse/pkg/utils"
 )
 
 type NodeManager struct {
